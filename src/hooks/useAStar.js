@@ -5,12 +5,13 @@ function useAStar() {
     const [visualizationState, setVisualizationState] = useState("idle") //idle, running, finished
     const [brush, setBrush] = useState("white")
 
+    const size = 50
+
     // Initialize the visualization state on first render
     useEffect(() => {
-        initialize(50)
+        initialize(size)
     }, [])
 
-    // TODO
     const initialize = (size = 50) => {
         setCellArray(
             Array.apply(null, Array(size ** 2)).map(function (x, i) {
@@ -46,6 +47,26 @@ function useAStar() {
         initialize()
         setVisualizationState((old) => "idle")
     }
+
+    const getCoordinatesFromIndex = (index) => {
+        const x = index % size
+        const y = Math.floor(index / size)
+        return { x, y }
+    }
+
+    const h = (p1, p2) => {
+        const p1Coord = getCoordinatesFromIndex(p1)
+        const p2Coord = getCoordinatesFromIndex(p2)
+
+        const distance = Math.sqrt(
+            Math.pow(p1Coord.x - p2Coord.x, 2) +
+            Math.pow(p1Coord.y - p2Coord.y, 2)
+        )
+
+        return distance
+    }
+
+
 
     // TODO
     const paint = (index) => {
