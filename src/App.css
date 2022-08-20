@@ -1,0 +1,62 @@
+.App {
+    text-align: center;
+    background-color: #282c34;
+    height: 100%;
+    width: 100%;
+}
+
+.App-header {
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.App-main-content-container {
+    margin: auto;
+}
+
+.App-title {
+    margin: 0;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-row-space-between {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.flex-row-space-around {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.toolbar {
+    margin: 15px;
+}
+
+.toolbar-item {
+    margin: 0 5px;
+}
+
+.brush-selector {
+    margin: 15px;
+}
+
+.brush-selector-container {
+    background-color: white;
+    border: 1px solid black;
+}
+
+.brush-selected-container {
+    width: ;
+}
