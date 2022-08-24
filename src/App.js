@@ -24,14 +24,8 @@ function App() {
     const brushText = {
       "white": "Free cell",
       "black": "Wall",
-      "green": "",
-      "red": "",
-      "blue": "",
-      "yellow": "",
-      "purple": "",
-      "orange": "",
-      "grey": "",
-      "turquoise": ""
+      "orange": "Start",
+      "turquoise": "End"
     }
 
     let colorArray = []
